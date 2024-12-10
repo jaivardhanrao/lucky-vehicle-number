@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucky Vehicle Number</title>
+  <link rel="icon" href="kismatcart square 4k.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      animation: open-up 1.5s;
+    }
+
+    .header_main {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to right, #5c0000, #a40000);
+      box-shadow: #5c0000 0px 0px 20px 5px;
+      padding: 0.5rem;
+    }
+
+    #header_logo_img {
+      height: 7rem;
+      filter: drop-shadow(0px 0px 6px #ffc101);
+    }
+
+    .header_links {
+      text-decoration: none;
+      color: #ffc101;
+      font-size: 1.4rem;
+      margin-left: 2vw;
+      animation: open-down 1.3s 1;
+      ;
+    }
+
+    .header_links:hover {
+      color: white;
+      font-size: 1.42rem;
+      text-shadow: white 0px 0px 1px;
+      transition: all ease-in-out 0.2s;
+    }
+
+
+    .nav-bar-items {
+      display: block;
+    }
+
+    .bars {
+      display: none;
+      color: white;
+      scale: 2.5;
+      margin-left: 4vw;
+    }
+
+    .cross {
+      display: none;
+      color: white;
+      scale: 2.5;
+      margin-left: 4vw;
+    }
+
+    .header-text {
+      display: none;
+      color: #ffc101;
+      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+      /* font-style: normal;
+        font-variant: normal; */
+      font-size: 4vh;
+      font-weight: 100;
+      margin-left: 8vw;
+      /* background: linear-gradient(90deg, #ff9966, #ff5e62); */
+    }
+
+
+
+    /* hero section */
+
+    .hero_main_div {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      text-align: center;
+    }
+
+    .hero_main_section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 7vh;
+      animation: open-up 1.3s ease-in-out;
+    }
+
+    .hero_main_name {
+      font-family: "Futura", sans-serif;
+      font-size: 4rem;
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero_main_abt {
+      font-family: "Futura Light", sans-serif;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #5c0000;
+      line-height: 1.5;
+    }
+
+    .hero_main_steps {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      font-family: "Futura", sans-serif;
+      color: #5c0000;
+    }
+
+    @keyframes open-up {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes open-down {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* payment and tutorial section section */
+    .final {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .video {
+
+      scale: 0.75;
+    }
+
+    .payLink {
+      text-decoration: none;
+      color: #ffc101;
+    }
+
+    .payDiv {
+      background-color: #5c0000;
+      height: 10vh;
+      width: 22vw;
+      box-sizing: border-box;
+      border: 5px solid #ffc101;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+      font-variant: normal;
+      border-radius: 10vh;
+      box-shadow: 0px 0px 10px 3px #ffc101;
+      scale: 1.2;
+      transition: all .2s ease-in-out;
+    }
+    .payDiv:hover{
+      scale: 1.26;
+    }
+
+    /* footer section */
+
+
+    .footer {
+      background-color: #5c0000;
+      /* Dark red background */
+      color: white;
+      /* White text */
+      padding: 2vw 0;
+      font-family: Arial, sans-serif;
+      margin-top: 40vh;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .footer-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-logo img {
+      height: 13vh;
+      margin-right: 2vw;
+    }
+
+    .footer-logo span {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffc101;
+      /* Yellow text */
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #ffc101;
+      /* Yellow text for links */
+      margin: 5px 0;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+      /* Highlight on hover */
+    }
+
+    .footer-copyright {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: white;
+    }
+
+
+    /* responsiveness */
+    @media (max-width: 786px) {
+      .header-text {
+        display: block;
+      }
+
+      .header_main {
+        display: flex;
+        /* row-gap: .6rem; */
+        width: 100vw;
+        /* padding-top: .1rem;  */
+        padding: 0;
+        padding-left: 3vw;
+        box-sizing: border-box;
+      }
+
+      .header_links {
+        margin: 0;
+        font-size: 1.2;
+
+      }
+
+      .header_logo_div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+      }
+      #header_logo_img{
+        height: 6rem;
+      }
+
+      .hero_main_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: 13rem; */
+        animation: open-up 1s ease-in-out;
+      }
+
+      .hero_main_name {
+        font-size: 3.2rem;
+      }
+
+      .hero_main_abt {
+        font-size: 1.2rem;
+      }
+
+      .hero_main_steps {
+        font-size: 2rem;
+
+      }
+
+      .nav-bar-items {
+        display: none;
+      }
+
+      .bars {
+        display: block;
+      }
+
+      .cross {
+        display: none;
+      }
+
+      #header_logo_img {
+        scale: 0.7;
+        margin-left: 2vw;
+      }
+
+      .video{
+        width: 97vw;
+        height: 30vh;
+      }
+      .payDiv{
+        font-size: .8rem;
+        width: 59vw;
+        height: 8vh;
+      }
+
+
+      
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header_main">
+
+    <i class="fa-solid fa-bars bars"></i>
+    <i class="fa-solid fa-xmark cross"></i>
+    <div class="header-text">KISMATCART</div>
+    <a target="_blank" href="https://kismatcart.com/" class="header_logo_div">
+      <img src="kismatcart square 4k.png" alt="kismatcart_logo" id="header_logo_img" />
+    </a>
+    <div class="nav-bar-items">
+      <a target="_blank" href="https://kismatcart.com/" class="header_links">Home</a>
+      <a target="_blank" href="https://kismatcart.com/about/" class="header_links">About</a>
+      <a target="_blank" href="https://kismatcart.com/name-numerology/" class="header_links">Name Numerology</a>
+      <a target="_blank" href="https://kismatcart.com/logo-design/" class="header_links">Logo Design</a>
+      <a target="_blank" href="https://kismatcart.com/mobile-numerology/" class="header_links">Mobile Numerology</a>
+      <a target="_blank" href="https://kismatcart.com/horoscope-kundli/" class="header_links">Horoscope/Kundli</a>
+      <a target="_blank" href="https://kismatcart.com/contact/" class="header_links">Contact</a>
+  </header>
+  </div>
+
+  <section class="hero_main_section">
+    <div class="hero_main_div">
+      <div class="hero_main_name">Lucky Vehicle Number</div>
+      <div class="hero_main_abt">
+        Unlock the power of astrology to find your lucky vehicle number!
+        Designed to attract positive energy and bring fortune on every
+        journey, our platform combines ancient wisdom with modern convenience.
+        Drive with confidence, knowing your vehicle number aligns with your
+        destiny.
+      </div>
+      <div class="hero_main_steps">
+        Follow these steps to get your own Lucky Vehicle Number
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="tutorial">
+      <iframe width="804" height="536"
+        src="https://www.youtube.com/embed/-EPsiFh4pKU?autoplay=1&mute=1&loop=1&playlist=-EPsiFh4pKU"
+        title="Guide to Payment Gateway" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video">
+      </iframe>
+
+    </div>
+    <a href="https://payments.cashfree.com/forms/lucky-vehicle-number" class="payLink" target="_blank">
+      <div class="payDiv">
+        Fill your Details and PAY HERE
+      </div>
+    </a>
+  </section>
+
+  <section class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="kismatcart square 4k.png" alt="kismatcart Logo">
+        <span>Kismat Cart</span>
+      </div>
+      <div class="footer-links">
+        <a target="_blank" href="https://kismatcart.com/terms-and-conditions/" class="terms">Terms and Conditions</a>
+        <a target="_blank" href="https://kismatcart.com/refund-policy/">Refund Policy</a>
+        <a target="_blank" href="https://kismatcart.com/privacy-policy-2/">Privacy Policy</a>
+        <a target="_blank" href="https://kismatcart.com/contact/">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2024 Kismat Cart. All rights reserved.
+    </div>
+  </section>
+</body>
+<script src="script.js"></script>
+
+</html>
